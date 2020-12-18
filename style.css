@@ -18,17 +18,24 @@ body {
   color: white;
 }
 
+.Header__logo {
+  font-weight: bold;
+  font-size: 3.25vmax;
+  letter-spacing: .2vmax;
+  transform: scaleY(.9);
+}
+
 .Header__nav {
   display: flex;
   align-items: center;
-  gap: 10vmin;
+  gap: 6vmax;
 }
 
 .Header__link {
   color: rgba(255, 255, 255, .8);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 2vmin;
+  font-size: .8vmax;
   transition: all .25s ease;
 }
 
@@ -42,7 +49,7 @@ body {
   padding: 0 3vmin;
   height: 4.5vmin;
   border-radius: 2.25vmin;
-  font-size: 2vmin;
+  font-size: .8vmax;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -52,7 +59,7 @@ body {
   height: 100vmin;
   position: relative;
   backdrop-filter: blur(5vmin);
-  padding: 4vmin 12vmin 30vmin 12vmin;
+  padding: 3vmin 16vmin 30vmin 12vmin;
 }
 
 .Top__bg {
@@ -71,7 +78,7 @@ body {
 
 .Top__bg_2 {
   height: 15vmin;
-  background: linear-gradient(to right, var(--azul) 3%, var(--purpura) 4%, var(--purpura) 50%, var(--purpura) 60%, var(--rojo) 70%);
+  background: linear-gradient(70deg, var(--azul) 3%, var(--purpura) 4%, var(--purpura) 60%, var(--rojo) 70%);
 }
 
 .Top__bg_3 {
@@ -108,8 +115,8 @@ body {
 }
 
 .Bienvenida__titulo {
-  font-size: 3.25vmax;
-  letter-spacing: .075vmax;
+  font-size: 3.75vmax;
+  letter-spacing: .3vmax;
 }
 
 .Bienvenida__mensaje {
@@ -126,7 +133,7 @@ body {
   align-self: flex-start;
   padding: 0 4vmin;
   height: 4.5vmin;
-  font-size: 2vmin;
+  font-size: .8vmax;
   border-radius: 2.25vmin;
   display: flex;
   align-items: center;
@@ -134,7 +141,66 @@ body {
 }
 
 .Celular {
-  flex: 1;
+  position: relative;
+  background-color: #323232;
+  --ancho-celular: 16vmax;
+  --alto-celular: calc(2 * var(--ancho-celular));
+  --borde-celular: .8vmax;
+  width: var(--ancho-celular);
+  height: var(--alto-celular);
+  border-radius: 2vmax;
+  border: var(--borde-celular) solid black;
+  margin-top: 4vmax;
+}
+
+.Celular::before {
+  position: absolute;
+  content: '';
+  width: 8vmax;
+  height: 2vmax;
+  background-color: black;
+  top: calc(-1 * var(--borde-celular));
+  left: calc((var(--ancho-celular) - 8vmax) / 2 - var(--borde-celular));
+  border-radius: 1vmax;
+}
+
+.Celular::after {
+  position: absolute;
+  content: '';
+  width: 8vmax;
+  height: .2vmax;
+  background-color: #474747;
+  bottom: .4vmax;
+  left: calc((var(--ancho-celular) - 8vmax) / 2 - var(--borde-celular));
+  border-radius: 1vmax;
+}
+
+.Celular__pantalla {
+  position: absolute;
+  top: calc(var(--alto-celular) / 10);
+  background-color: #E6E6E6;
+  width: calc(var(--ancho-celular) - 2 * var(--borde-celular));
+  height: calc(4 * var(--alto-celular) / 5 - 2 * var(--borde-celular));
+  display: flex;
+  flex-direction: column;
+  gap: .75vmax;
+  padding: 1vmax;
+}
+
+.Celular__mensaje {
+  min-height: calc(var(--alto-celular) / 20);
+  min-width: calc(var(--alto-celular) / 8);
+  border-radius: .25vmax;
+}
+
+.Celular__mensaje--saliente {
+  align-self: flex-end;
+  background-color: #00D100;
+}
+
+.Celular__mensaje--entrante {
+  align-self: flex-start;
+  background-color: white;
 }
 
 .Info {
