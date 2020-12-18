@@ -1,0 +1,144 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  --azul: #0358F0;
+  --purpura: #90099C;
+  --rojo: #E93427;
+  font-family: sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.Header__nav {
+  display: flex;
+  align-items: center;
+  gap: 10vmin;
+}
+
+.Header__link {
+  color: rgba(255, 255, 255, .8);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2vmin;
+  transition: all .25s ease;
+}
+
+.Header__link:hover {
+  color: white;
+}
+
+.Header__cta {
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 0 3vmin;
+  height: 4.5vmin;
+  border-radius: 2.25vmin;
+  font-size: 2vmin;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Top {
+  height: 100vmin;
+  position: relative;
+  backdrop-filter: blur(5vmin);
+  padding: 4vmin 12vmin 30vmin 12vmin;
+}
+
+.Top__bg {
+  position: absolute;
+  height: 100vmin;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.Top__bg_1 {
+  height: 10vmin;
+  background: linear-gradient(to right, var(--azul) 50%, var(--purpura) 55%, var(--purpura) 60%, var(--rojo) 70%);
+}
+
+.Top__bg_2 {
+  height: 15vmin;
+  background: linear-gradient(to right, var(--azul) 3%, var(--purpura) 4%, var(--purpura) 50%, var(--purpura) 60%, var(--rojo) 70%);
+}
+
+.Top__bg_3 {
+  height: 30vmin;
+  background: linear-gradient(to right, var(--azul) 3%, var(--purpura) 4%, var(--purpura) 60%, var(--rojo) 70%);
+}
+
+.Top__bg_4 {
+  height: 5vmin;
+  background: linear-gradient(to right, var(--purpura) 1%, var(--purpura) 10%, var(--rojo) 10%);
+}
+
+.Top__bg_5 {
+  height: 20vmin;
+  background: linear-gradient(to right, var(--rojo) 2%, var(--purpura) 2%, var(--purpura) 15%, var(--rojo) 25%);
+}
+
+.Top__bg_6 {
+  height: 20vmin;
+  background: var(--rojo);
+}
+
+.Top__contenedor {
+  display: flex;
+}
+
+.Bienvenida {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  height: 80vmin;
+}
+
+.Bienvenida__titulo {
+  font-size: 3.25vmax;
+  letter-spacing: .075vmax;
+}
+
+.Bienvenida__mensaje {
+  font-size: 1.25vmax;
+  padding-block-start: 7vmin;
+  padding-block-end: 5vmin;
+  letter-spacing: .05vmax;
+  line-height: 1.25;
+}
+
+.Bienvenida__cta {
+  text-transform: uppercase;
+  border: 1px solid white;
+  align-self: flex-start;
+  padding: 0 4vmin;
+  height: 4.5vmin;
+  font-size: 2vmin;
+  border-radius: 2.25vmin;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Celular {
+  flex: 1;
+}
+
+.Info {
+  height: 100vmin;
+  position: relative;
+  background: linear-gradient(to bottom, var(--rojo) 60%, white 60%);
+}
