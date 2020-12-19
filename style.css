@@ -12,10 +12,40 @@ body {
   box-sizing: border-box;
 }
 
+.Top {
+  height: 100vmin;
+  position: relative;
+  padding: 3vmin 16vmin 30vmin 12vmin;
+  backdrop-filter: blur(5vmin);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Top::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100vmin + 20vmin);
+  width: calc(100% + 20vmin);
+  z-index: -2;
+  background:
+    linear-gradient(to right, var(--azul) 50%, var(--purpura) 55% 60%, var(--rojo) 70%) 0% 0% / 100% 17% no-repeat,
+    linear-gradient(70deg, var(--azul) 5%, var(--purpura) 8% 60%, var(--rojo) 70%) 0% 17% / 100% 13% no-repeat,
+    linear-gradient(to right, var(--azul) 5%, var(--purpura) 8% 60%, var(--rojo) 70%) 0% 30% / 100% 40% no-repeat,
+    linear-gradient(to right, var(--purpura) 1% 10%, var(--rojo) 10%) 0% 70% / 100% 5% no-repeat,
+    linear-gradient(to right, var(--rojo) 2%, var(--purpura) 2% 15%, var(--rojo) 25%) 0% 75% / 100% 20% no-repeat,
+    var(--rojo);
+  filter: blur(5vmin);
+  margin: -10vmin -10vmin -10vmin -10vmin;
+}
+
 .Header {
   display: flex;
   justify-content: space-between;
   color: white;
+  width: 100%;
 }
 
 .Header__logo {
@@ -53,56 +83,6 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.Top {
-  height: 100vmin;
-  position: relative;
-  backdrop-filter: blur(5vmin);
-  padding: 3vmin 16vmin 30vmin 12vmin;
-}
-
-.Top__bg {
-  position: absolute;
-  height: 100vmin;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: -1;
-}
-
-.Top__bg_1 {
-  height: 10vmin;
-  background: linear-gradient(to right, var(--azul) 50%, var(--purpura) 55%, var(--purpura) 60%, var(--rojo) 70%);
-}
-
-.Top__bg_2 {
-  height: 15vmin;
-  background: linear-gradient(70deg, var(--azul) 3%, var(--purpura) 4%, var(--purpura) 60%, var(--rojo) 70%);
-}
-
-.Top__bg_3 {
-  height: 30vmin;
-  background: linear-gradient(to right, var(--azul) 3%, var(--purpura) 4%, var(--purpura) 60%, var(--rojo) 70%);
-}
-
-.Top__bg_4 {
-  height: 5vmin;
-  background: linear-gradient(to right, var(--purpura) 1%, var(--purpura) 10%, var(--rojo) 10%);
-}
-
-.Top__bg_5 {
-  height: 20vmin;
-  background: linear-gradient(to right, var(--rojo) 2%, var(--purpura) 2%, var(--purpura) 15%, var(--rojo) 25%);
-}
-
-.Top__bg_6 {
-  height: 20vmin;
-  background: var(--rojo);
-}
-
-.Top__contenedor {
-  display: flex;
 }
 
 .Bienvenida {
