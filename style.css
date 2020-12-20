@@ -171,6 +171,13 @@ body {
   min-height: calc(var(--alto-celular) / 20);
   min-width: calc(var(--alto-celular) / 8);
   border-radius: .25vmax;
+  font-size: 1.5vmax;
+  position: relative;
+}
+
+.Celular__mensaje::before {
+  position: absolute;
+  content: '';
 }
 
 .Celular__mensaje--saliente {
@@ -178,9 +185,74 @@ body {
   background-color: #00D100;
 }
 
+.Celular__mensaje--saliente::before {
+  border: .35vmax solid transparent;
+  border-top-color: #00D100;
+  right: -.35vmax;
+  top: .25vmax;
+}
+
 .Celular__mensaje--entrante {
   align-self: flex-start;
   background-color: white;
+}
+
+.Celular__mensaje--entrante::before {
+  border: .35vmax solid transparent;
+  border-top-color: white;
+  left: -.35vmax;
+  top: .25vmax;
+}
+
+.Celular__mensaje--saliente_grande {
+  background-color: #00D100;
+  align-self: flex-end;
+  width: 22vmax;
+  padding: .65vmax;
+  border-radius: .5vmax;
+  line-height: 1.1;
+  margin-right: .75vmax;
+  box-shadow:
+    0 0 .75vmax rgba(0, 0, 0, .4),
+    0 0 .25vmax rgba(0, 0, 0, .15);
+}
+
+.Celular__mensaje--saliente_grande::before {
+  border: 2vmax solid transparent;
+  border-right-width: 1.75vmax;
+  border-top-color: #00D100;
+  right: -1vmax;
+  top: .5vmax;
+}
+
+/* .Celular__mensaje--saliente_grande::before {
+  border-top-color: rgba(0, 0, 0, .8);
+  filter: blur(.25vmax);
+} */
+
+.Celular__mensaje--saliente_grande:nth-child(4) {
+  width: 16vmax;
+}
+
+.Celular__mensaje--entrante_grande {
+  align-self: flex-end;
+  width: 11vmax;
+  transform: translateX(-11vmax);
+  background-color: white;
+  padding: .65vmax;
+  border-radius: .5vmax;
+  line-height: 1.1;
+  box-shadow:
+    0 0 .75vmax rgba(0, 0, 0, .4),
+    0 0 .25vmax rgba(0, 0, 0, .15);
+}
+
+.Celular__mensaje--entrante_grande::before {
+  border: 2vmax solid transparent;
+  border-top-color: white;
+  left: -1vmax;
+  top: .5vmax;
+  z-index: -1;
 }
 
 .Info {
@@ -196,15 +268,35 @@ body {
   width: 50%;
   height: 40vmin;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.Info__pregunta:first-child p,
-.Info__pregunta:first-child h2 {
+.Info__pregunta:not(:first-child) {
+  padding-right: 5vmax;
+  align-items: flex-end;
+}
+
+.Info__pregunta:first-child .Info__titulo_pregunta,
+.Info__pregunta:first-child .Info__respuesta_pregunta {
   border-right: 1px solid white;
 }
 
 .Info__titulo_pregunta {
-  font-size: 5vmin;
+  font-size: 3vmax;
+  letter-spacing: .1vmax;
+}
+
+.Info__titulo_pregunta::before {
+  content: '01.';
+  width: 5vmax;
+  display: inline-block;
+}
+
+.Info__respuesta_pregunta {
+  padding: 2vmax 0vmax 2vmax 5vmax;
+  line-height: 1.35;
+  letter-spacing: .1vmax;
 }
 
 .Info__imperativo {
