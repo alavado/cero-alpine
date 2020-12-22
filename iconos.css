@@ -1,0 +1,37 @@
+div[class^="icono"] {
+  --color: lightgray;
+  --alto: 2vmax;
+}
+
+.icono_detecta {
+  position: relative;
+  width: var(--alto);
+  height: var(--alto);
+  background:
+    linear-gradient(transparent 0 35%, white 35% 65%, transparent 65%),
+    linear-gradient(to right, transparent 0 35%, white 35% 65%, transparent 65%),
+    linear-gradient(var(--color) 0% 15%, transparent 15% 85%, var(--color) 85%),
+    linear-gradient(to right, var(--color) 0% 15%, transparent 15% 85%, var(--color) 85%)
+  ;
+}
+
+.icono_detecta::after {
+  position: absolute;
+  content: '';
+  width: var(--alto);
+  height: var(--alto);
+  background:
+    linear-gradient(transparent 90%, var(--color) 90%)
+  ;
+  transform: translateY(-40%) translateX(-10%) rotateZ(-45deg);
+}
+
+.icono_automatiza {
+  width: var(--alto);
+  height: var(--alto);
+}
+
+.icono_convierte {
+  width: var(--alto);
+  height: var(--alto);
+}

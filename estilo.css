@@ -197,6 +197,10 @@ body {
   background-color: white;
 }
 
+.Celular__mensaje--entrante:nth-last-child(2) {
+  min-width: calc(var(--alto-celular) / 4);
+}
+
 .Celular__mensaje--entrante::before {
   border: .35vmax solid transparent;
   border-top-color: white;
@@ -304,6 +308,21 @@ body {
   border: 1px solid var(--rojo);
   background-color: white;
   height: 45vmin;
+  padding: 2.5vmax 4vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Info__verbo_imperativo {
+  font-size: 3vmax;
+  letter-spacing: .1vmax;
+}
+
+.Info__descripcion_imperativo {
+  font-size: 1.25vmax;
+  letter-spacing: .1vmax;
+  line-height: 1.15;
 }
 
 .Servicios {
