@@ -331,12 +331,36 @@ body {
   padding: 5vmin 20vmin 30vmin 13vmin;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Servicios__titulo {
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-left: 1vmax;
 }
 
 .Servicios li {
   font-size: 2.5vmax;
-  letter-spacing: .1vmax;
-  line-height: 2.5;
+  letter-spacing: .25vmax;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+}
+
+.Servicios li::before {
+  content: '✓';
+  display: inline-block;
+  width: 1.5vmax;
+  height: 1.5vmax;
+  font-size: 1vmax;
+  background-color: #00d201;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vmax;
 }
 
 .Beneficios {
@@ -361,7 +385,7 @@ body {
   border-right: none;
   background-color: white;
   height: 60vmin;
-  padding: 2.5vmax 4vmax;
+  padding: 2vmax;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -374,7 +398,7 @@ body {
 }
 
 .Beneficios__descripcion_imperativo {
-  font-size: 1vmax;
+  font-size: 1.25vmax;
   letter-spacing: .1vmax;
   line-height: 1.15;
 }
@@ -390,6 +414,23 @@ body {
 .Trabajemos {
   height: 90vmin;
   background-color: black;
+  color: white;
+  padding: 10vmin 20vmin 30vmin 13vmin;
+}
+
+.Trabajemos__titulo {
+  margin-bottom: 6vmin;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 3.5vmax 0;
+  margin-left: 1vmax;
+}
+
+.Trabajemos__mensaje {
+  font-size: 3.5vmax;
+  max-width: 36ch;
+  letter-spacing: .25vmax;
+  margin-left: 1vmax;
 }
 
 .Footer {
