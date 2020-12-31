@@ -21,14 +21,38 @@ div[class^="icono"] {
   width: var(--alto);
   height: var(--alto);
   background:
-    linear-gradient(transparent 90%, var(--color) 90%)
+    linear-gradient(to right, var(--color) 15%, transparent 15%) bottom / 100% 35% no-repeat,
+    linear-gradient(transparent 85%, var(--color) 85%) left / 52% 100% no-repeat
   ;
-  transform: translateY(-40%) translateX(-10%) rotateZ(-45deg);
+  transform: translateY(-40%) translateX(-5%) rotateZ(-45deg);
 }
 
 .icono_automatiza {
-  width: var(--alto);
-  height: var(--alto);
+  position: relative;
+  width: calc(var(--alto) / 2);
+  height: calc(var(--alto) / 2);
+  background: var(--color);
+  display: flex;
+  align-items: center;
+}
+
+.icono_automatiza::before {
+  position: absolute;
+  content: '';
+  left: calc(var(--alto) - .5vmax);
+  width: calc(var(--alto) / 2);
+  height: calc(var(--alto) / 5);
+  background: var(--color);
+}
+
+.icono_automatiza::after {
+  position: absolute;
+  content: '';
+  left: calc(2 * var(--alto) - 1vmax);
+  width: calc(var(--alto) / 2);
+  height: calc(var(--alto) / 2);
+  background: var(--color);
+  border-radius: 50%;
 }
 
 .icono_convierte {

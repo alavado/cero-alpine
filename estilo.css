@@ -315,7 +315,7 @@ body {
 }
 
 .Info__verbo_imperativo {
-  font-size: 3vmax;
+  font-size: 2.5vmax;
   letter-spacing: .1vmax;
 }
 
@@ -328,12 +328,63 @@ body {
 .Servicios {
   height: 70vmin;
   background-color: white;
+  padding: 5vmin 20vmin 30vmin 13vmin;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Servicios li {
+  font-size: 2.5vmax;
+  letter-spacing: .1vmax;
+  line-height: 2.5;
 }
 
 .Beneficios {
-  height: 180vmin;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10vmin 0vmin 30vmin 13vmin;
   background:
-    linear-gradient(white 0% 20%, red 20%, lightgray 90%);
+    linear-gradient(white 0% 20%, transparent 20% 50%, lightgray 90%),
+    linear-gradient(to right, var(--rojo), var(--purpura), var(--azul));
+}
+
+.Beneficios__titulo {
+  margin-left: 1vmax;
+  margin-bottom: 6vmin;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.Beneficios__imperativo {
+  width: calc(100% / 3);
+  border: 1px solid rgba(0, 0, 0, .75);
+  border-right: none;
+  background-color: white;
+  height: 60vmin;
+  padding: 2.5vmax 4vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Beneficios__verbo_imperativo {
+  font-size: 2.5vmax;
+  letter-spacing: .1vmax;
+  line-height: 1.25;
+}
+
+.Beneficios__descripcion_imperativo {
+  font-size: 1vmax;
+  letter-spacing: .1vmax;
+  line-height: 1.15;
+}
+
+.Beneficios__titulo_testimonio {
+  margin-left: 1vmax;
+  margin-top: 20vmin;
+  margin-bottom: 6vmin;
+  width: 100%;
+  text-transform: uppercase;
 }
 
 .Trabajemos {
