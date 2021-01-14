@@ -20,6 +20,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--rojo);
 }
 
 .Top::before {
@@ -27,23 +28,28 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  height: calc(100vmin + 20vmin);
+  height: calc(100vmin);
   width: calc(100% + 20vmin);
   z-index: -2;
   background:
-    linear-gradient(transparent 70%, var(--rojo) 90%),
-    radial-gradient(circle, var(--purpura) 10%, var(--rojo) 90%),
-    var(--rojo); 
+    linear-gradient(transparent 70%, var(--rojo) 100%),
+    radial-gradient(circle at 50% 50%, var(--purpura) 0%, transparent 20%),
+    radial-gradient(circle, var(--purpura) 10%, var(--rojo) 80%);
   margin: -10vmin -10vmin -10vmin -10vmin;
-  animation: mueve-fondo 10s ease both;
+  transform: skew(45deg);
+  animation: Top__mueve-fondo 15s ease infinite both;
+  border-radius: 33%;
 }
 
-@keyframes mueve-fondo {
+@keyframes Top__mueve-fondo {
   0% {
     background-position-x: 0vw;
   }
-  100% {
+  50% {
     background-position-x: 100vw;
+  }
+  100% {
+    background-position-x: 0vw;
   }
 }
 
@@ -57,7 +63,6 @@ body {
 .Header__logo {
   font-weight: bold;
   font-size: 3.25vmax;
-  letter-spacing: .2vmax;
   transform: scaleY(.9);
 }
 
@@ -110,6 +115,7 @@ body {
   padding-block-start: 7vmin;
   padding-block-end: 5vmin;
   line-height: 1.25;
+  mix-blend-mode: luminosity;
 }
 
 .Bienvenida__cta {
@@ -271,6 +277,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 10vmin 20vmin 30vmin 13vmin;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .Info__pregunta {
@@ -293,7 +300,6 @@ body {
 
 .Info__titulo_pregunta {
   font-size: 3vmax;
-  letter-spacing: .1vmax;
 }
 
 .Info__titulo_pregunta::before {
@@ -304,8 +310,7 @@ body {
 
 .Info__respuesta_pregunta {
   padding: 2vmax 0vmax 2vmax 5vmax;
-  line-height: 1.35;
-  letter-spacing: .1vmax;
+  line-height: 1.5;
 }
 
 .Info__imperativo {
@@ -321,12 +326,10 @@ body {
 
 .Info__verbo_imperativo {
   font-size: 2.5vmax;
-  letter-spacing: .1vmax;
 }
 
 .Info__descripcion_imperativo {
   font-size: 1.25vmax;
-  letter-spacing: .1vmax;
   line-height: 1.15;
 }
 
@@ -347,7 +350,6 @@ body {
 
 .Servicios li {
   font-size: 2.5vmax;
-  letter-spacing: .25vmax;
   line-height: 2;
   display: flex;
   align-items: center;
@@ -374,7 +376,17 @@ body {
   padding: 10vmin 0vmin 30vmin 13vmin;
   background:
     linear-gradient(white 0% 20%, transparent 20% 50%, lightgray 90%),
-    linear-gradient(to right, var(--rojo), var(--purpura), var(--azul));
+    linear-gradient(to right, var(--rojo), var(--purpura), var(--azul), var(--rojo));
+  animation: Beneficios__mueve_fondo 10s linear infinite both;
+}
+
+@keyframes Beneficios__mueve_fondo {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 120vw;
+  }
 }
 
 .Beneficios__titulo {
@@ -398,13 +410,11 @@ body {
 
 .Beneficios__verbo_imperativo {
   font-size: 2.5vmax;
-  letter-spacing: .1vmax;
   line-height: 1.25;
 }
 
 .Beneficios__descripcion_imperativo {
   font-size: 1.25vmax;
-  letter-spacing: .1vmax;
   line-height: 1.15;
 }
 
@@ -434,7 +444,6 @@ body {
 .Trabajemos__mensaje {
   font-size: 3.5vmax;
   max-width: 36ch;
-  letter-spacing: .25vmax;
   margin-left: 1vmax;
 }
 
